@@ -42,10 +42,11 @@ h2 {
 
 /* this is the menu and categories */
 .menu {
-    display: grid;
+    display: flex;
     grid-row: 2;
     grid-column: 2;
-    grid-template-rows: repeat(6, auto);
+    flex-direction: column;
+
 }
 
 #explaination {
@@ -81,6 +82,10 @@ i {
     padding: 3px;
     transform: rotate(-45deg);
     margin-bottom: 4px;
+}
+
+.CategoryName {
+    text-transform: capitalize;
 }
 
 /* this is the dish cartouche */
@@ -122,9 +127,26 @@ i {
 .text-dish {
     display: grid;
     grid-template-columns: 3;
-    grid-template-rows: 60px 90px 40px;
+    grid-template-rows: 60px 90px 40px 30px;
 
 }
+
+button {
+    grid-row: 4;
+    grid-column: span 3;
+    border-radius: 10px;
+    background-color: #40213E;
+    color: white;
+}
+
+button:hover {
+    grid-row: 4;
+    grid-column: span 3;
+    border-radius: 10px;
+    background-color: #8C3B87;
+    color: white;
+}
+
 
 .text-dish-hover {
     display: grid;
@@ -133,7 +155,7 @@ i {
 
 }
 
-.subCat {
+.SubCat {
     grid-row: 2;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     display: none;
@@ -199,22 +221,29 @@ h1 {
     display: grid;
 }
 
+@keyframes arrowStyle {
+    from {transform: rotate(-45deg)}
+    to {transform:rotate(45deg)}
+}
 .newRot {
-    transform: rotate(45deg);
+    animation: arrowStyle .2s ease-in forwards;
 }
 
 /* this starts the specific dishes */
-#vegan {
+.vegan {
+    height: 2em;
+    width: 2em;
+    grid-column: 3;
+    grid-row: 3;
+    align-self: end;
+}
+
+.peanut {
     height: 2em;
     width: 2em;
 }
 
-#peanut {
-    height: 2em;
-    width: 2em;
-}
-
-#alcohol {
+.alcohol {
     height: 2em;
     width: 2em;
 }

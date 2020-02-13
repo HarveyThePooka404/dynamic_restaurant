@@ -9,22 +9,22 @@
 </head>
 
 <body>
-    <div class="banner">
+    <header class="banner">
         <img src="assets/White-Rabbit.jpg" alt="banner" class="banner-img">
         <h2> White Rabbit</h2>
-    </div>
+    </header>
 
 
     <!-- end of the banner -->
 
 
-    <div class="menu">
+    <main class="menu">
 
         <div id="explaination">This is an explanation of the symbols so that you don't die:
             <ul>
-                <li><img id="vegan" src="assets/vegan.svg" alt="vegan"> means that it is vegan.</li>
-                <li><img id="peanut" src="assets/peanut.svg" alt="peanut"> means that there is some sort of allergens, please see the long description.</li>
-                <li><img id="alcohol" src="assets/alcohol.svg" alt="alcohol"> means this drink won't be much fun.</li>
+                <li><img class="vegan" src="assets/vegan.svg" alt="vegan"> means that it is vegan.</li>
+                <li><img class="peanut" src="assets/peanut.svg" alt="peanut"> means that there is some sort of allergens, please see the long description.</li>
+                <li><img class="alcohol" src="assets/alcohol.svg" alt="alcohol"> means this drink won't be much fun.</li>
             </ul>
 
 
@@ -32,13 +32,32 @@
 
         <!-- above is the explanation for the allergens and symbols -->
 
-        <div class="category" id="cat1">
+<template class="category">
+   <div class="title-dd"><i class="arrow"></i> <span class="CategoryName"></span></div>
+   <div class="SubCat">
 
-            <div class="title-dd" id="tdd1"> <i id="tri1"></i> Starters </div>
 
-            <div class="subCat" id="starter">
+    </div>
+       </template>
 
-                <div class="dish" id="dish1">
+
+                       <template class="dish--template">
+
+            <article class="dish">
+                <img src="" alt="" class="dishprez">
+                <div class="text-dish">
+                    <h1 class="name"></h1>
+                    <p class="shortDesc"></p>
+                    <p class="price"><span ></span> DKK</p>
+
+                    <button type="button" class="LearnMore">Learn More</button>
+
+                </div>
+            </article>
+
+            </template>
+<!--
+                 <div class="dish" id="dish1">
 
                     <img class="dishprez" src="assets/imgs/small/baltiskbondesuppe-sm.jpg" alt="whatever">
 
@@ -47,32 +66,25 @@
                         <p class="shortDesc"> It has a short description that isn't very long.</p>
                         <p class="price"> 890 DKK </p>
                         <img class="special" id="vegan" src="assets/vegan.svg" alt="vegan">
-                    </div></div>
-
-                    <!-- The Modal -->
+                    </div></div>-->
                     <div id="myModal" class="modal">
 
-                        <!-- Modal content -->
                         <div class="modal-content">
-                            <div class="dish-hover" id="dish1-hover">
+                            <div class="dish-hover">
 
-                                <img class="dishprez-hover" src="assets/imgs/small/baltiskbondesuppe-sm.jpg" alt="whatever">
+                                <img class="dishprez-hover" src="" alt="">
 
                                 <div class="text-dish-hover">
-                                    <h1 class="name">Russian Soup</h1>
-                                    <p class="longDesc"> Diplomatiet har haft mange udfordringer i USSR. Derfor blev der sørget godt for dem, og som nogen af de få, fik diplomaterne mange bøffer under den kolde krig. Diplomat-bøffen med grillede grøntsager og koldpresset olie er af ypperste kvalitet - kødet kommer fra udsultede ungkalve i Viktoriagrad.</p>
-                                    <p class="price"> 890 DKK </p>
-                                    <img class="special" id="vegan" src="assets/vegan.svg" alt="vegan">
+                                    <h1 class="nameModal"> FAKE NAME</h1>
+                                    <p class="longDesc"> fake Description</p>
+                                    <p class="priceModal"> 999 DKK</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <!-- end of modal -->
 
 
-
-                <div class="dish" id="Dish2">
+<!--                 <div class="dish" id="Dish2">
                     <img class="dishprez" src="assets/imgs/small/baltiskbondesuppe-sm.jpg" alt="whatever">
 
                     <div class="text-dish">
@@ -107,70 +119,41 @@
                         <p class="price" id="initial-price"> 890 DKK</p>
                         <p class="soldout"> SOLD OUT </p>
                     </div>
-                </div>
-            </div>
-            </div>
-
+                </div> -->
 
         <!-- above is the template for the dish -->
+<!--
+ <div class="category">
+    <div class="title-dd" id="tdd2"> <i></i> Main </div>
+     <div class="subCat" id="main"></div>
 
-        <div class="category" id="cat2">
-            <div class="title-dd" id="tdd2"> <i></i> Main </div>
-        </div>
+</div>
 
-        <!-- above is the set up for main -->
+above is the set up for main
+<div class="category">
+    <div class="title-dd" id="tdd3"> <i></i> Side Orders</div>
+         <div class="subCat" id="sideorders"></div>
 
-        <div class="category" id="cat3">
-            <div class="title-dd" id="tdd3"> <i></i> Side Orders</div>
-        </div>
+</div>
 
-        <!-- above is the set up for sideorder -->
+above is the set up for sideorder
+<div class="category">
+    <div class="title-dd" id="tdd4"> <i></i> Desserts</div>
+         <div class="subCat" id="dessert"></div>
 
-        <div class="category" id="cat4">
-            <div class="title-dd" id="tdd4"> <i></i> Desserts</div>
-        </div>
+</div>
 
-        <!-- above is the set up for dessert -->
+above is the set up for dessert
+<div class="category">
+    <div class="title-dd" id="tdd5"> <i></i> Drinks </div>
+         <div class="subCat" id="drinks"></div>
 
-        <div class="category" id="cat5">
-            <div class="title-dd" id="tdd5"> <i></i> Drinks </div>
-        </div>
-
+</div>  -->
         <!-- above is the set up for drinks -->
-    </div>
+
+    </main>
 </body>
 
-<script>
-    const tdd1 = document.querySelector("#tdd1");
-    const starters = document.querySelector("#starter");
-    const tri1 = document.querySelector("#tri1");
-
-    tdd1.addEventListener("click", dropDown)
-
-    function dropDown() {
-        console.log("what up?");
-        starters.classList.toggle("appear");
-        tri1.classList.toggle("newRot");
-
-    }
-
-    // Get the modal
-const modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-const dish1 = document.getElementById("dish1");
-
-// When the user clicks the button, open the modal
-dish1.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+<script src="main.js"></script>
 
 </html>
