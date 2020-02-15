@@ -6,7 +6,7 @@
 body {
     background-color: #E3E4E6;
     display: grid;
-    grid-template-rows: 50vh 8fr;
+    /*    grid-template-rows: 50vh 8fr; */
     grid-template-columns: 2fr 8fr;
     margin: 0;
 }
@@ -75,6 +75,11 @@ li {
     margin: 0.5em 0;
 }
 
+.title-dd:hover {
+    cursor: pointer;
+    color: #40213E;
+}
+
 i {
     border: solid black;
     border-width: 0 2px 2px 0;
@@ -94,18 +99,23 @@ i {
     border-radius: 10px;
     max-width: 20vw;
     width: 100%;
+    height: 25vh;
 }
 
 .dishprez-hover {
+    grid-column: 1;
     border-radius: 10px;
     width: 100%;
+    justify-self: center;
+    max-height: 55vh;
 }
+
 .dish {
     background-color: rgba(229, 228, 226, 1);
     display: grid;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: 5fr auto;
 
-    box-shadow: 2px 2px 5px 0px rgba(191,184,191,1);
+    box-shadow: 2px 2px 5px 0px rgba(191, 184, 191, 1);
     border: 1px solid #798699;
     border-radius: 10px;
     padding: 5px;
@@ -121,7 +131,6 @@ i {
     border-radius: 10px;
     padding: 15px;
     margin: 5px;
-    height: 100%;
 }
 
 .text-dish {
@@ -129,6 +138,12 @@ i {
     grid-template-columns: 3;
     grid-template-rows: 60px 90px 40px 30px;
 
+}
+
+.special {
+    grid-area: 3 / 3;
+    display: flex;
+    flex-flow:row-reverse;
 }
 
 button {
@@ -145,16 +160,36 @@ button:hover {
     border-radius: 10px;
     background-color: #8C3B87;
     color: white;
+    cursor: pointer;
+}
+
+.veganfilter {
+    padding: 0.5em;
+    margin: 1em;
 }
 
 
 .text-dish-hover {
+    grid-row:2;
     display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 60px auto 40px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto auto;
+    padding-left: 2em;
+    padding-right: 2em;
 
 }
 
+.priceHover {
+    grid-column: 1;
+    grid-row:3;
+}
+
+.special-hover {
+    display: flex;
+    flex-flow: row-reverse;
+    grid-row: 3;
+    grid-column: 3;
+}
 .SubCat {
     grid-row: 2;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -179,12 +214,6 @@ h1 {
 
 .price {
     grid-row: 3;
-}
-
-.special {
-    grid-row: 3;
-    grid-column: 3;
-    align-self: end;
 }
 
 
@@ -222,20 +251,34 @@ h1 {
 }
 
 @keyframes arrowStyle {
-    from {transform: rotate(-45deg)}
-    to {transform:rotate(45deg)}
+    from {
+        transform: rotate(-45deg)
+    }
+
+    to {
+        transform: rotate(45deg)
+    }
 }
+
 .newRot {
     animation: arrowStyle .2s ease-in forwards;
 }
 
 /* this starts the specific dishes */
+
+.hidden-vege {
+    display: none;
+}
+
+.hidden-alcohol {
+    display: none;
+}
 .vegan {
     height: 2em;
     width: 2em;
     grid-column: 3;
     grid-row: 3;
-    align-self: end;
+    justify-self: end;
 }
 
 .peanut {
@@ -246,44 +289,78 @@ h1 {
 .alcohol {
     height: 2em;
     width: 2em;
+    height: 2em;
+    width: 2em;
+    grid-column: 3;
+    grid-row: 3;
+    justify-self: center;
 }
 
-#soldout {
-    filter: grayscale(100%);
+.discounted {
+    text-decoration-line: line-through;
+
+}
+.veganHover {
+    height: 2em;
+    width: 2em;
+    grid-column: 3;
+    grid-row: 3;
+    justify-self: end;
+}
+
+.peanutHover {
+    height: 2em;
+    width: 2em;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.alcoholHover {
+    height: 2em;
+    width: 2em;
+    grid-column: 3;
+    grid-row: 3;
+    grid-column: 3;
+    grid-row: 3;
 }
 
 .soldout {
-    grid-column: 2;
-    grid-row: 3;
-    font-weight: bold;
-    padding: 0 1em ;
+    filter: grayscale(100%);
 }
 
 #initial-price {
-      text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 /* Styling the modal */
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
-  padding-top: 8vh; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 2;
+    /* Sit on top */
+    padding-top: 4vh;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ opacity */
 }
 
-/* Modal Content */
+/* Modal  */
 .modal-content {
-  margin: auto;
+    margin: auto;
     border: 1px solid #888;
-    width: 40%;
+    width: 50%;
     height: 80vh;
 }
 

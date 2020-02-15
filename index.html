@@ -23,8 +23,11 @@
         <div id="explaination">This is an explanation of the symbols so that you don't die:
             <ul>
                 <li><img class="vegan" src="assets/vegan.svg" alt="vegan"> means that it is vegan.</li>
+                <button class="veganfilter"> Click here to only see vege dishes</button>
                 <li><img class="peanut" src="assets/peanut.svg" alt="peanut"> means that there is some sort of allergens, please see the long description.</li>
-                <li><img class="alcohol" src="assets/alcohol.svg" alt="alcohol"> means this drink won't be much fun.</li>
+                <li><img class="alcohol" src="assets/alcohol.svg" alt="alcohol"> means this drink will be much fun.</li>
+                                <button class="alcoholfilter"> Click here to only see dishes that are fun</button>
+
             </ul>
 
 
@@ -46,9 +49,12 @@
             <article class="dish">
                 <img src="" alt="" class="dishprez">
                 <div class="text-dish">
+
                     <h1 class="name"></h1>
                     <p class="shortDesc"></p>
                     <p class="price"><span ></span> DKK</p>
+                    <p class="priceDiscount"></p>
+                    <div class="special"></div>
 
                     <button type="button" class="LearnMore">Learn More</button>
 
@@ -56,100 +62,28 @@
             </article>
 
             </template>
-<!--
-                 <div class="dish" id="dish1">
 
-                    <img class="dishprez" src="assets/imgs/small/baltiskbondesuppe-sm.jpg" alt="whatever">
-
-                    <div class="text-dish">
-                        <h1 class="name">Russian Soup</h1>
-                        <p class="shortDesc"> It has a short description that isn't very long.</p>
-                        <p class="price"> 890 DKK </p>
-                        <img class="special" id="vegan" src="assets/vegan.svg" alt="vegan">
-                    </div></div>-->
                     <div id="myModal" class="modal">
 
                         <div class="modal-content">
                             <div class="dish-hover">
 
-                                <img class="dishprez-hover" src="" alt="">
-
+                                <img class="dishprez-hover" src="" alt="    ">
                                 <div class="text-dish-hover">
                                     <h1 class="nameModal"> FAKE NAME</h1>
                                     <p class="longDesc"> fake Description</p>
-                                    <p class="priceModal"> 999 DKK</p>
-                                </div>
+                                    <p class="priceHover"><span class="priceModal">999</span> DKK</p>
+                                    <p class="priceHoverDiscount"></p>
+                                     <div class="special-hover"></div>
+                                    </div>
+
+
+
+                    </div>
+
                             </div>
                         </div>
-                    </div>
 
-
-<!--                 <div class="dish" id="Dish2">
-                    <img class="dishprez" src="assets/imgs/small/baltiskbondesuppe-sm.jpg" alt="whatever">
-
-                    <div class="text-dish">
-                        <h1 class="name">This is a dish</h1>
-                        <p class="shortDesc"> Russisk salat med ærter, bønner, gulerødder og mayonnaise fra Volgograd
-                        </p>
-                        <p class="price"> 890 DKK</p>
-                        <img id="peanut" class="special" src="assets/peanut.svg" alt="peanut">
-                    </div>
-
-                </div>
-
-                <div class="dish" id="dish3">
-                    <img class="dishprez" src="assets/imgs/small/baltiskbondesuppe-sm.jpg" alt="whatever">
-
-                    <div class="text-dish">
-                        <h1 class="name">This is a dish</h1>
-                        <p class="shortDesc"> It has a short description that isn't very long.</p>
-                        <p class="price"> 890 DKK</p>
-
-                        <img id="alcohol" class="special" src="assets/alcohol.svg" alt="alcohol">
-                    </div>
-
-                </div>
-
-                <div class="dish" id="dish4">
-
-                    <img class="dishprez" id="soldout" src="assets/imgs/small/baltiskbondesuppe-sm.jpg" alt="whatever">
-                    <div class="text-dish">
-                        <h1 class="name">This is a dish</h1>
-                        <p class="shortDesc"> It has a short description that isn't very long.</p>
-                        <p class="price" id="initial-price"> 890 DKK</p>
-                        <p class="soldout"> SOLD OUT </p>
-                    </div>
-                </div> -->
-
-        <!-- above is the template for the dish -->
-<!--
- <div class="category">
-    <div class="title-dd" id="tdd2"> <i></i> Main </div>
-     <div class="subCat" id="main"></div>
-
-</div>
-
-above is the set up for main
-<div class="category">
-    <div class="title-dd" id="tdd3"> <i></i> Side Orders</div>
-         <div class="subCat" id="sideorders"></div>
-
-</div>
-
-above is the set up for sideorder
-<div class="category">
-    <div class="title-dd" id="tdd4"> <i></i> Desserts</div>
-         <div class="subCat" id="dessert"></div>
-
-</div>
-
-above is the set up for dessert
-<div class="category">
-    <div class="title-dd" id="tdd5"> <i></i> Drinks </div>
-         <div class="subCat" id="drinks"></div>
-
-</div>  -->
-        <!-- above is the set up for drinks -->
 
     </main>
 </body>
